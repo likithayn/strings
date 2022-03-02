@@ -1,7 +1,7 @@
 //SEARCH AND REPLACE STRINGS
 #include <stdio.h>
 #include<string.h>
-void accept(char  t[],char  ps[],char  rs[])
+void accept(char * t,char * ps,char * rs)
 {
     printf("enter the main string\n");
     scanf("%s",t);
@@ -10,7 +10,7 @@ void accept(char  t[],char  ps[],char  rs[])
     printf("enter the replacing string\n");
     scanf("%s",rs);
 }
-int pattern_match(char  ps[],char  t[],int pos)
+int pattern_match(char * ps,char * t,int pos)
 {
     for(int i=0;i<strlen(ps);i++,pos++)
     {
@@ -22,7 +22,7 @@ int pattern_match(char  ps[],char  t[],int pos)
     }
     return 0;
 }
-int copy_str_cpy(char  ostr[],char  rs[],int ostr_pos)
+int copy_str_cpy(char * ostr,char * rs,int ostr_pos)
 {
     for(int i=0;i<strlen(rs);i++)
     {
